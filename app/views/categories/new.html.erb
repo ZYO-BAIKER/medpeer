@@ -1,0 +1,19 @@
+<div class='form-wrap'>
+  <%= form_with(model: @category_idea, class: 'registration-user', url: categories_path, local: true) do |form| %>
+    <%= render 'error_messages', model: @category_idea %>
+
+    <h1>カテゴリーを入力</h1>
+    <div class="category-field">
+      <%= form.text_field :name, class:"items-text" %>
+    </div>
+
+    <h1>アイディアを入力</h1>
+    <div class="idea-field">
+      <%= form.text_area :body, class:"items-text" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "登録する" %>
+    </div>
+  <% end %>
+</div>

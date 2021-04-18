@@ -1,6 +1,6 @@
 <div class='form-wrap'>
   <%= form_with(model: @category_idea, class: 'registration-user', url: categories_path, local: true) do |form| %>
-    <%= render 'error_messages', model: @category_idea %>
+    <%= render 'error_messages', model: form.object %>
 
     <h1>カテゴリーを入力</h1>
     <div class="category-field">

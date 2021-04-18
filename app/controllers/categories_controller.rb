@@ -1,8 +1,9 @@
 class CategoriesController < ApplicationController
 
-  # before_action :search_category, only: [:index, :search]
+  before_action :search_category, only: [:index, :search]
 
   def index
+    set_category_column
   end
 
   def new
@@ -19,9 +20,9 @@ class CategoriesController < ApplicationController
     end
   end
 
-  # def search
-  #   @results = @p.result.includes(:idea)
-  # end
+  def search
+    @results = @p.result.includes(:ideas)
+  end
   
   private
 
@@ -29,8 +30,12 @@ class CategoriesController < ApplicationController
     params.require(:categories_idea).permit(:body, :name)
   end
 
-  # def search_category
-  #   @p = Category.ransack(params[:q])
-  # end
+  def search_category
+    @p = Category.ransack(params[:q])
+  end
+
+  def set_category_column
+    @category_name = Category.select("name").distinct
+  end
 
 end

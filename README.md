@@ -1,5 +1,8 @@
 # README
-
+# 本番環境(デプロイ先テストアカウント＆ID)
+  ○接続先： https://sheltered-thicket-83138.herokuapp.com/ <br>
+  ○認証ID/Pass:  admin / 2222<br>
+  
 # DB設計
 
 ## categoriesテーブル

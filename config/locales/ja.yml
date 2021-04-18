@@ -1,0 +1,6 @@
+ja:
+  activemodel:
+    attributes:
+      categories_idea:
+        body: アイディア
+        name: カテゴリー
